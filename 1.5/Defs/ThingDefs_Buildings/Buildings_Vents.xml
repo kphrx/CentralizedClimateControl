@@ -31,13 +31,17 @@
   <!-- Base Wall Mounted Vent Building -->
   <ThingDef Abstract="True" Name="CentralizedClimateControl_BaseWallVent" ParentName="CentralizedClimateControl_BaseVent">
     <placeWorkers>
-      <li>CentralizedClimateControl.PlaceWorker_NeedsWall</li>
+      <li>Placeworker_AttachedToWall</li>
       <li>CentralizedClimateControl.PlaceWorker_AirVent</li>
     </placeWorkers>
-    <altitudeLayer>PawnUnused</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <building>
       <isEdifice>false</isEdifice>
+      <isAttachment>true</isAttachment>
     </building>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <terrainAffordanceNeeded IsNull="True" />
   </ThingDef>
   <!-- Base Full Size Vent Building -->
   <ThingDef Abstract="True" Name="CentralizedClimateControl_BaseSurroundVent" ParentName="CentralizedClimateControl_BaseVent">
